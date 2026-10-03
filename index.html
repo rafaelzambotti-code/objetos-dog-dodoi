@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Dodoi</title>
+    <script>
+        var dogDodoi = {
+            veterinarios: [],
+            pacientes: [],
+            medicamentos: [],
+            endereco: {
+                logradouro: "Rua dos cachorros",
+                numero: 10,
+                bairro: "Vira-lata",
+                cidade: "Pinchers",
+                estado: "SP"
+            },
+            contatos: [
+                {
+                    tipo: "telefone",
+                    valor: "18 3939 3636"
+
+                },
+                {
+                    tipo: "Whatsapp",
+                    valor: "18 99712 1212"
+                },
+                {
+                    tipo: "Instagram",
+                    valor: "https://instagram.com.br/dogdodoi"
+                }
+            ],
+            cadastrarVeterinario(){
+                var nome = prompt("Digite o nome: ")
+                var especialidade = prompt("Digite a especialidade: ")
+
+
+
+                this.veterinarios.push({
+                 nome:nome,
+                especialidade:especialidade})
+            },
+            cadastrarPaciente(){
+                // Nome tutor, telefone, idade, nome do animal     
+                var tutor = prompt("Digite seu nome: ")
+                var telefone = Number(prompt("Digite seu telefone: "))
+                var idade = Number(prompt("Digite a idade do animal"))
+                var nomeAnimal = ("Digite o nome do animal: ")
+                
+                this.pacientes.push({
+                    tutor: tutor,
+                    telefone: telefone,
+                    idade: idade,
+                    nomeAnimal: nomeAnimal
+                })
+                    
+                
+                
+            },
+            listarVeterinarios(){
+                // listar todos os veterinarios
+                for(var funcionarios of this.veterinarios ){
+                    console.log(funcionarios.nome)
+                    console.log(funcionarios.especialidade)
+                }
+
+
+
+            },
+            listarPacientes(){
+                // Listar todos os pacientes
+                for (var animais of this.pacientes){
+                    console.log(animais.tutor)
+                    console.log(animais.telefone)
+                    console.log(animais.idade)
+                    console.log(animais.nomeAnimal)
+                }
+            }   
+        }
+
+        dogDodoi.cadastrarPaciente()
+        dogDodoi.cadastrarVeterinario()
+        dogDodoi.listarPacientes()
+        dogDodoi.listarVeterinarios()
+    
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
